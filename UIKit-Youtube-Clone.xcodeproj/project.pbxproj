@@ -17,6 +17,8 @@
 		018BC4D82848104500D5805B /* ShortsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4D72848104500D5805B /* ShortsViewController.swift */; };
 		018BC4DA2848108700D5805B /* SubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4D92848108700D5805B /* SubscriptionsViewController.swift */; };
 		018BC4DC2848113900D5805B /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4DB2848113900D5805B /* LibraryViewController.swift */; };
+		018BC4DE28481C6300D5805B /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4DD28481C6300D5805B /* CreateViewController.swift */; };
+		018BC4E12848BDAD00D5805B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4E02848BDAD00D5805B /* CustomTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		018BC4D72848104500D5805B /* ShortsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsViewController.swift; sourceTree = "<group>"; };
 		018BC4D92848108700D5805B /* SubscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsViewController.swift; sourceTree = "<group>"; };
 		018BC4DB2848113900D5805B /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		018BC4DD28481C6300D5805B /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		018BC4E02848BDAD00D5805B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 		018BC4D028480E3300D5805B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				018BC4DF2848BD9F00D5805B /* Custom */,
 				018BC4D128480E6E00D5805B /* Core */,
 				018BC4C02848090500D5805B /* TabBarViewController.swift */,
 			);
@@ -91,6 +96,7 @@
 				018BC4D72848104500D5805B /* ShortsViewController.swift */,
 				018BC4D92848108700D5805B /* SubscriptionsViewController.swift */,
 				018BC4DB2848113900D5805B /* LibraryViewController.swift */,
+				018BC4DD28481C6300D5805B /* CreateViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -101,6 +107,14 @@
 				018BC4D528480FDE00D5805B /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		018BC4DF2848BD9F00D5805B /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				018BC4E02848BDAD00D5805B /* CustomTabBar.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +189,11 @@
 			files = (
 				018BC4D628480FDE00D5805B /* Constants.swift in Sources */,
 				018BC4D328480F0800D5805B /* HomeViewController.swift in Sources */,
+				018BC4DE28481C6300D5805B /* CreateViewController.swift in Sources */,
 				018BC4DC2848113900D5805B /* LibraryViewController.swift in Sources */,
 				018BC4C12848090500D5805B /* TabBarViewController.swift in Sources */,
 				018BC4D82848104500D5805B /* ShortsViewController.swift in Sources */,
+				018BC4E12848BDAD00D5805B /* CustomTabBar.swift in Sources */,
 				018BC4BD2848090500D5805B /* AppDelegate.swift in Sources */,
 				018BC4BF2848090500D5805B /* SceneDelegate.swift in Sources */,
 				018BC4DA2848108700D5805B /* SubscriptionsViewController.swift in Sources */,
