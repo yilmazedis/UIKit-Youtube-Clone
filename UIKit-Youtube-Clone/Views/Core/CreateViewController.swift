@@ -6,16 +6,71 @@
 //
 
 import UIKit
+import TinyConstraints
 
 class CreateViewController: UIViewController {
+    
+    private lazy var containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBlue
+        return view
+    }()
+    
+    private lazy var lineView_1: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemYellow
+        return view
+    }()
+    
+    private lazy var lineView_2: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemRed
+        return view
+    }()
+    
+    private lazy var lineView_3: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemOrange
+        return view
+    }()
+    
+    private lazy var lineView_4: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGreen
+        return view
+    }()
+    
+    
     
     init() {
         super.init(nibName: nil, bundle: nil)
         transitioningDelegate = self
         modalPresentationStyle = .custom
-        view.backgroundColor = .lightGray
+        view.backgroundColor = .systemBackground
         view.addGestureRecognizer(UIPanGestureRecognizer(target: self,
                                                          action: #selector(handleDismiss)))
+        
+        view.layer.cornerRadius = 20.0
+        view.layer.masksToBounds = true
+
+        //UIView Set up border
+        view.layer.borderColor = UIColor.systemYellow.cgColor
+        view.layer.borderWidth = 3.0
+        
+        setConstraints()
+    }
+    
+    private func setConstraints() {
+        view.addSubview(containerView)
+        containerView.edgesToSuperview(insets: .top(20) + .left(20) + .bottom(20) + .right(20))
+        
+        let containerViews = [lineView_1, lineView_2, lineView_3, lineView_4]
+        
+        // 12 is 4 containerViews multiply lastHeight division
+        // 4 * 3 = 12
+        // 10 is - 20 top and bottom equal 40. so there are four subview. then divide by 4.
+        // (20 * 2) / 4 = 10
+        containerView.stack(containerViews, axis: .vertical, height: view.frame.height/12 - 10, spacing:0)
     }
     
     var viewTranslation = CGPoint(x: 0, y: 0)
@@ -42,31 +97,6 @@ class CreateViewController: UIViewController {
     required init?(coder: NSCoder) { super.init(coder: coder) }
 }
 
-protocol MPControllerDelegate: AnyObject {
-    func updateFrame(with frame: CGRect) -> CGRect
-}
-
-class MPController: UIPresentationController {
-    private weak var MPDelegate: MPControllerDelegate!
-    
-    convenience
-    init(delegate: MPControllerDelegate,
-         presentedViewController: UIViewController,
-         presenting presentingViewController: UIViewController?) {
-        
-        self.init(presentedViewController: presentedViewController,
-                  presenting: presentingViewController)
-        self.MPDelegate = delegate
-    }
-    
-    override var frameOfPresentedViewInContainerView: CGRect {
-        get {
-            MPDelegate.updateFrame(with: super.frameOfPresentedViewInContainerView)
-            
-        }
-    }
-}
-
 extension CreateViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController,
                                 presenting: UIViewController?,
@@ -79,6 +109,10 @@ extension CreateViewController: UIViewControllerTransitioningDelegate {
 
 extension CreateViewController: MPControllerDelegate {
     func updateFrame(with frame: CGRect) -> CGRect {
-        CGRect(x: 0, y: frame.height/2, width: frame.width, height: frame.height/2)
+        
+        // use in containerView
+        let lastHeight = frame.height/3
+        
+        return CGRect(x: 0, y: frame.height - lastHeight, width: frame.width, height: lastHeight)
     }
 }
