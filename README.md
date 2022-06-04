@@ -7,7 +7,7 @@ It is a Youtube clone. There won't be a UI functionality.
 
 |  Goal Demo                |  Feature-V-1     |
 |:-------------------------:|:-------------------------:|
-![](DemoGifs/goal_demo.gif) | ![](DemoGifs/Feature-V-1.png)
+<img src=DemoGifs/goal_demo.gif width="300" height="500"> | <img src=DemoGifs/Feature-V-1.png width="300" height="600">
 
 
 
