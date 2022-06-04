@@ -19,6 +19,8 @@
 		018BC4DC2848113900D5805B /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4DB2848113900D5805B /* LibraryViewController.swift */; };
 		018BC4DE28481C6300D5805B /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4DD28481C6300D5805B /* CreateViewController.swift */; };
 		018BC4E12848BDAD00D5805B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4E02848BDAD00D5805B /* CustomTabBar.swift */; };
+		01B74597284A8C8700083457 /* MPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B74596284A8C8700083457 /* MPController.swift */; };
+		01B7459A284BC3FD00083457 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 01B74599284BC3FD00083457 /* TinyConstraints */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,7 @@
 		018BC4DB2848113900D5805B /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		018BC4DD28481C6300D5805B /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		018BC4E02848BDAD00D5805B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		01B74596284A8C8700083457 /* MPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01B7459A284BC3FD00083457 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				018BC4E02848BDAD00D5805B /* CustomTabBar.swift */,
+				01B74596284A8C8700083457 /* MPController.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -133,6 +138,9 @@
 			dependencies = (
 			);
 			name = "UIKit-Youtube-Clone";
+			packageProductDependencies = (
+				01B74599284BC3FD00083457 /* TinyConstraints */,
+			);
 			productName = "UIKit-Youtube-Clone";
 			productReference = 018BC4B92848090500D5805B /* UIKit-Youtube-Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -161,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 018BC4B02848090500D5805B;
+			packageReferences = (
+				01B74598284BC3FD00083457 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = 018BC4BA2848090500D5805B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -189,6 +200,7 @@
 			files = (
 				018BC4D628480FDE00D5805B /* Constants.swift in Sources */,
 				018BC4D328480F0800D5805B /* HomeViewController.swift in Sources */,
+				01B74597284A8C8700083457 /* MPController.swift in Sources */,
 				018BC4DE28481C6300D5805B /* CreateViewController.swift in Sources */,
 				018BC4DC2848113900D5805B /* LibraryViewController.swift in Sources */,
 				018BC4C12848090500D5805B /* TabBarViewController.swift in Sources */,
@@ -402,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		01B74598284BC3FD00083457 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		01B74599284BC3FD00083457 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 01B74598284BC3FD00083457 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 018BC4B12848090500D5805B /* Project object */;
 }
