@@ -5,6 +5,9 @@ It is a Youtube clone. There won't be a UI functionality.
 ### Usage
 - same as much as real Youtube 
 
-|  Goal Demo                |
-|:-------------------------:|
-![](DemoGifs/goal_demo.gif)
+|  Goal Demo                |  Feature-V-1     |
+|:-------------------------:|:-------------------------:|
+![](DemoGifs/goal_demo.gif) | ![](DemoGifs/Feature-V-1.png)
+
+
+
