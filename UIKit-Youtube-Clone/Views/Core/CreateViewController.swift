@@ -8,12 +8,6 @@
 import UIKit
 import TinyConstraints
 
-enum CreateViewLine: NSInteger {
-    case shortView
-    case uploadView
-    case createImage
-}
-
 class CreateViewController: UIViewController {
     
     // MARK: - Container & Stack Views -

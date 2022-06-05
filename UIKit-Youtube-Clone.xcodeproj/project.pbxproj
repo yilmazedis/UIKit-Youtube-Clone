@@ -18,7 +18,7 @@
 		018BC4DA2848108700D5805B /* SubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4D92848108700D5805B /* SubscriptionsViewController.swift */; };
 		018BC4DC2848113900D5805B /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4DB2848113900D5805B /* LibraryViewController.swift */; };
 		018BC4DE28481C6300D5805B /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4DD28481C6300D5805B /* CreateViewController.swift */; };
-		018BC4E12848BDAD00D5805B /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018BC4E02848BDAD00D5805B /* CustomTabBar.swift */; };
+		01B714F3284C44210087E838 /* CreateViewLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B714F2284C44210087E838 /* CreateViewLine.swift */; };
 		01B74597284A8C8700083457 /* MPController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B74596284A8C8700083457 /* MPController.swift */; };
 		01B7459A284BC3FD00083457 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 01B74599284BC3FD00083457 /* TinyConstraints */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,7 @@
 		018BC4D92848108700D5805B /* SubscriptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionsViewController.swift; sourceTree = "<group>"; };
 		018BC4DB2848113900D5805B /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		018BC4DD28481C6300D5805B /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
-		018BC4E02848BDAD00D5805B /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		01B714F2284C44210087E838 /* CreateViewLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewLine.swift; sourceTree = "<group>"; };
 		01B74596284A8C8700083457 /* MPController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +108,7 @@
 		018BC4D428480FD100D5805B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				01B714F1284C43FB0087E838 /* Enumerations */,
 				018BC4D528480FDE00D5805B /* Constants.swift */,
 			);
 			path = Utilities;
@@ -116,10 +117,17 @@
 		018BC4DF2848BD9F00D5805B /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				018BC4E02848BDAD00D5805B /* CustomTabBar.swift */,
 				01B74596284A8C8700083457 /* MPController.swift */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		01B714F1284C43FB0087E838 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				01B714F2284C44210087E838 /* CreateViewLine.swift */,
+			);
+			path = Enumerations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,9 +211,9 @@
 				01B74597284A8C8700083457 /* MPController.swift in Sources */,
 				018BC4DE28481C6300D5805B /* CreateViewController.swift in Sources */,
 				018BC4DC2848113900D5805B /* LibraryViewController.swift in Sources */,
+				01B714F3284C44210087E838 /* CreateViewLine.swift in Sources */,
 				018BC4C12848090500D5805B /* TabBarViewController.swift in Sources */,
 				018BC4D82848104500D5805B /* ShortsViewController.swift in Sources */,
-				018BC4E12848BDAD00D5805B /* CustomTabBar.swift in Sources */,
 				018BC4BD2848090500D5805B /* AppDelegate.swift in Sources */,
 				018BC4BF2848090500D5805B /* SceneDelegate.swift in Sources */,
 				018BC4DA2848108700D5805B /* SubscriptionsViewController.swift in Sources */,
