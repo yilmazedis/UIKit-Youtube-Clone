@@ -57,6 +57,8 @@ final class HomeViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.tableHeaderView = HomeHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 60))
+        
         configureNavigationBar()
     }
     
