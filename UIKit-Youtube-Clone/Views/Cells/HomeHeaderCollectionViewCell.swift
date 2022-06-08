@@ -43,18 +43,20 @@ class HomeHeaderCollectionViewCell: UICollectionViewCell {
 //        headerCellButton.frame = contentView.bounds
     }
 
-
     public func configure(with model: HomeHeader) {
         headerCellButton.setTitle(model.title, for: .normal)
         headerCellButton.tag = model.tag
         
-        if model.tag == -1 {
+        if model.title == "Explore" {
             headerCellButton.setImage(UIImage(systemName: "safari"), for: .normal)
         }
         
-        headerCellButton.edgesToSuperview(excluding: .right)
-        
-        headerCellButton.sizeToFit()
+        headerCellButton.edgesToSuperview()
+    }
+    
+    override func prepareForReuse() {
+        // TODO: cell reuse issue didnt fix
+        super.prepareForReuse()
     }
     
     @objc private func buttonTouchUpInside(sender: UIButton) {

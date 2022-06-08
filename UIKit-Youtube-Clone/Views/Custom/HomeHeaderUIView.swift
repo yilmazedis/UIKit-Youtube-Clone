@@ -79,7 +79,7 @@ extension HomeHeaderUIView: UICollectionViewDelegate, UICollectionViewDataSource
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeHeaderCollectionViewCell.identifier, for: indexPath) as? HomeHeaderCollectionViewCell else {
             return UICollectionViewCell()
         }
-        
+        print(homeHeader[indexPath.row].tag, homeHeader[indexPath.row].title)
         cell.configure(with: homeHeader[indexPath.row])
         
         return cell
@@ -98,8 +98,6 @@ extension HomeHeaderUIView: UICollectionViewDelegate, UICollectionViewDataSource
         
         return CGSize(width: finalWidth, height: 32)
     }
-    
-    
 }
 
 extension HomeHeaderUIView: UICollectionViewDelegateFlowLayout {

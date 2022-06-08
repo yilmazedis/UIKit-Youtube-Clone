@@ -46,7 +46,7 @@ final class HomeViewController: UIViewController {
     
     private let tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .grouped)
-        table.register(UITableViewCell.self, forCellReuseIdentifier: K.cell)
+        table.register(HomeTableViewCell.self, forCellReuseIdentifier: K.cell)
         return table
     }()
     
@@ -99,11 +99,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cell, for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: K.cell, for: indexPath) as? HomeTableViewCell else {
+            print("yilmaz")
+            return UITableViewCell()
+        }
         
-        cell.textLabel?.text = "Home"
-        cell.accessoryType = .disclosureIndicator
-        cell.selectionStyle = .none
+        cell.configure()
+        
         return cell
     }
     

@@ -24,6 +24,7 @@
 		01DAA3FC284CFE95004759F1 /* HomeHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DAA3FB284CFE95004759F1 /* HomeHeaderUIView.swift */; };
 		01DAA3FF284D0759004759F1 /* HomeHeaderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DAA3FE284D0759004759F1 /* HomeHeaderCollectionViewCell.swift */; };
 		01DAA402284D49D6004759F1 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DAA401284D49D6004759F1 /* HomeHeader.swift */; };
+		01F37A4128506867001C34C2 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F37A4028506867001C34C2 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		01DAA3FB284CFE95004759F1 /* HomeHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderUIView.swift; sourceTree = "<group>"; };
 		01DAA3FE284D0759004759F1 /* HomeHeaderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCollectionViewCell.swift; sourceTree = "<group>"; };
 		01DAA401284D49D6004759F1 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
+		01F37A4028506867001C34C2 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				01DAA3FE284D0759004759F1 /* HomeHeaderCollectionViewCell.swift */,
+				01F37A4028506867001C34C2 /* HomeTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				018BC4DE28481C6300D5805B /* CreateViewController.swift in Sources */,
 				018BC4DC2848113900D5805B /* LibraryViewController.swift in Sources */,
 				01B714F3284C44210087E838 /* CreateViewLine.swift in Sources */,
+				01F37A4128506867001C34C2 /* HomeTableViewCell.swift in Sources */,
 				018BC4C12848090500D5805B /* TabBarViewController.swift in Sources */,
 				018BC4D82848104500D5805B /* ShortsViewController.swift in Sources */,
 				01DAA3FC284CFE95004759F1 /* HomeHeaderUIView.swift in Sources */,

@@ -9,6 +9,6 @@ import Foundation
 
 struct K {
     static let cell = "Cell"
-    static let cellHight = 60
+    static let cellHight = 350
 
 }
