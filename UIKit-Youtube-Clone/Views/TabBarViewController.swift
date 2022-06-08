@@ -11,9 +11,6 @@ class TabBarViewController: UITabBarController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-        
         delegate = self
 
         let vc1 = UINavigationController(rootViewController: HomeViewController())
@@ -44,12 +41,9 @@ class TabBarViewController: UITabBarController {
 
         setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
     }
-    
-
 }
 
-
-// MARK: - UITabBarController Delegate
+// MARK: - UITabBarController Delegate -
 extension TabBarViewController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         guard let selectedIndex = tabBarController.viewControllers?.firstIndex(of: viewController) else {
@@ -59,13 +53,10 @@ extension TabBarViewController: UITabBarControllerDelegate {
         // Your middle tab bar item index.
         // In my case it's 1.
         if selectedIndex == 2 {
-            
             let viewController = CreateViewController()
             present(viewController, animated: true, completion: nil)
-            
             return false
-        } 
-        
+        }
         return true
     }
 }
