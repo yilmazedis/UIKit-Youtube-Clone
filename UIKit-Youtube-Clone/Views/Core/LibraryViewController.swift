@@ -14,8 +14,6 @@ final class LibraryViewController: UIViewController {
         table.register(UITableViewCell.self, forCellReuseIdentifier: K.cell)
         return table
     }()
-    
-    var region: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()

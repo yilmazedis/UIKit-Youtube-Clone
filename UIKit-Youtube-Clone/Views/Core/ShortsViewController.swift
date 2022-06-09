@@ -9,44 +9,64 @@ import UIKit
 
 final class ShortsViewController: UIViewController {
     
-    private let tableView: UITableView = {
-        let table = UITableView(frame: .zero, style: .grouped)
-        table.register(UITableViewCell.self, forCellReuseIdentifier: K.cell)
-        return table
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: view.frame.size.width,
+                                 height: view.frame.size.height)
+        layout.scrollDirection = .vertical
+        layout.sectionInset = .init(top: 0, left: 0, bottom: 0, right: 0)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.register(ShortsCollectionViewCell.self,
+                                forCellWithReuseIdentifier: ShortsCollectionViewCell.identifier)
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.isPagingEnabled = true
+        return collectionView
     }()
-    
-    var region: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        view.addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
+        view.addSubview(collectionView)
+        collectionView.dataSource = self
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableView.frame = view.bounds
+        collectionView.frame = view.bounds
     }
 }
 
-extension ShortsViewController: UITableViewDelegate, UITableViewDataSource {
+extension ShortsViewController: UICollectionViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cell, for: indexPath)
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ShortsCollectionViewCell.identifier, for: indexPath) as? ShortsCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.configure()
         
-        cell.textLabel?.text = "Shorts"
-        cell.accessoryType = .disclosureIndicator
-        cell.selectionStyle = .none
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(K.cellHight)
+}
+
+extension ShortsViewController: UICollectionViewDelegateFlowLayout {
+
+    // Distance Between Item Cells
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
     }
+    
+    // Cell Margin
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+    }
+
 }
