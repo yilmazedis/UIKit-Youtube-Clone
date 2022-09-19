@@ -26,6 +26,8 @@
 		01DAA402284D49D6004759F1 /* HomeHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01DAA401284D49D6004759F1 /* HomeHeader.swift */; };
 		01F37A4128506867001C34C2 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F37A4028506867001C34C2 /* HomeTableViewCell.swift */; };
 		01F37A4528520860001C34C2 /* ShortsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F37A4428520860001C34C2 /* ShortsCollectionViewCell.swift */; };
+		01F37A472852C230001C34C2 /* dendi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 01F37A462852C228001C34C2 /* dendi.mp4 */; };
+		01F37A492852C45D001C34C2 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F37A482852C45D001C34C2 /* VideoPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		01DAA401284D49D6004759F1 /* HomeHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeader.swift; sourceTree = "<group>"; };
 		01F37A4028506867001C34C2 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		01F37A4428520860001C34C2 /* ShortsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsCollectionViewCell.swift; sourceTree = "<group>"; };
+		01F37A462852C228001C34C2 /* dendi.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = dendi.mp4; sourceTree = "<group>"; };
+		01F37A482852C45D001C34C2 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 		018BC4BB2848090500D5805B /* UIKit-Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				01F37A462852C228001C34C2 /* dendi.mp4 */,
 				01DAA400284D49BC004759F1 /* Models */,
 				018BC4D428480FD100D5805B /* Utilities */,
 				018BC4D028480E3300D5805B /* Views */,
@@ -122,6 +127,7 @@
 			children = (
 				01B714F1284C43FB0087E838 /* Enumerations */,
 				018BC4D528480FDE00D5805B /* Constants.swift */,
+				01F37A482852C45D001C34C2 /* VideoPlayer.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				018BC4C92848090700D5805B /* LaunchScreen.storyboard in Resources */,
+				01F37A472852C230001C34C2 /* dendi.mp4 in Resources */,
 				018BC4C62848090700D5805B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +263,7 @@
 				018BC4D628480FDE00D5805B /* Constants.swift in Sources */,
 				018BC4D328480F0800D5805B /* HomeViewController.swift in Sources */,
 				01B74597284A8C8700083457 /* MPController.swift in Sources */,
+				01F37A492852C45D001C34C2 /* VideoPlayer.swift in Sources */,
 				01F37A4528520860001C34C2 /* ShortsCollectionViewCell.swift in Sources */,
 				018BC4DE28481C6300D5805B /* CreateViewController.swift in Sources */,
 				018BC4DC2848113900D5805B /* LibraryViewController.swift in Sources */,

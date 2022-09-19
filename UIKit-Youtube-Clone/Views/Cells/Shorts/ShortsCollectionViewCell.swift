@@ -7,18 +7,43 @@
 
 import UIKit
 import TinyConstraints
+import AVFoundation
 
 class ShortsCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "ShortsCollectionViewCell"
     
+    private lazy var playerView: AVPlayerLayer = {
+        let playerView = AVPlayerLayer()
+        playerView.videoGravity = .resizeAspectFill
+        
+        return playerView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-
+        clipsToBounds = true
+        
+        playerView.frame = bounds
     }
     
     func configure() {
-        backgroundColor = .red
+        
+        guard let path = Bundle.main.path(forResource: "dendi", ofType: "mp4") else {
+            print("Failed to find video")
+            return
+        }
+        
+        if VideoPlayer.shared.player == nil {
+            VideoPlayer.shared.player  = AVPlayer(url: URL(fileURLWithPath: path))
+        } else {
+            VideoPlayer.shared.player?.replaceCurrentItem(with: AVPlayerItem(url: URL(fileURLWithPath: path)))
+        }
+        
+        playerView.player = VideoPlayer.shared.player
+        
+        layer.addSublayer(playerView)
+        //VideoPlayer.shared.player?.play()
     }
     
     required init?(coder: NSCoder) {
@@ -29,5 +54,4 @@ class ShortsCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
 //        headerCellButton.frame = contentView.bounds
     }
-    
 }

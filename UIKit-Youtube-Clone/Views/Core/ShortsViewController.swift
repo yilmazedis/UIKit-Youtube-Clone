@@ -20,6 +20,7 @@ final class ShortsViewController: UIViewController {
                                 forCellWithReuseIdentifier: ShortsCollectionViewCell.identifier)
         collectionView.showsVerticalScrollIndicator = false
         collectionView.isPagingEnabled = true
+        collectionView.contentInsetAdjustmentBehavior = .never
         return collectionView
     }()
 
@@ -28,6 +29,7 @@ final class ShortsViewController: UIViewController {
                 
         view.addSubview(collectionView)
         collectionView.dataSource = self
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -59,14 +61,5 @@ extension ShortsViewController: UICollectionViewDataSource {
 
 extension ShortsViewController: UICollectionViewDelegateFlowLayout {
 
-    // Distance Between Item Cells
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
-    }
-    
-    // Cell Margin
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
-    }
 
 }

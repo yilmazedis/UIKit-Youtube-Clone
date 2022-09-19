@@ -14,7 +14,7 @@ class TabBarViewController: UITabBarController {
         delegate = self
 
         let vc1 = UINavigationController(rootViewController: HomeViewController())
-        let vc2 = UINavigationController(rootViewController: ShortsViewController())
+        let vc2 = ShortsViewController()
         let vc3 = UINavigationController(rootViewController: CreateViewController())
         let vc4 = UINavigationController(rootViewController: SubscriptionsViewController())
         let vc5 = UINavigationController(rootViewController: LibraryViewController())
@@ -38,7 +38,8 @@ class TabBarViewController: UITabBarController {
         } else {
             tabBar.standardAppearance = appearance
         }
-
+        
+        
         setViewControllers([vc1, vc2, vc3, vc4, vc5], animated: true)
     }
 }
